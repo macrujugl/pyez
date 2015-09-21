@@ -12,3 +12,10 @@ bgptable:
    fields:
       state: peer-state
       AS: peer-as
+   groups:
+      prefix_stats: bgp-rib
+   fields_prefix_stats:
+      active-prefix: { active-prefix-count : int }
+      received-prefix: { received-prefix-count : int }
+      accepted-prefix: { accepted-prefix-count : int }
+      suppressed-prefix: {suppressed-prefix-count : int }
