@@ -1,0 +1,14 @@
+---
+BgpNeigh:
+   rpc: get-bgp-summary-information
+   args:
+      exact-instance: 'master'
+   args_key: 'exact-instance'
+   item: bgp-peer 
+   key: peer-address
+   view: bgptable
+
+bgptable:
+   fields:
+      state: peer-state
+      AS: peer-as
