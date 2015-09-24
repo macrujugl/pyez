@@ -1,0 +1,24 @@
+---
+IfacesEthernetTable:
+   rpc: get-interface-information
+   args:
+     terse: True
+     interface-name: '*e-*'
+   args_key: 'interface-name'
+   item: physical-interface/logical-interface
+   key: name/logical-interface
+   view: IfacesEthernetView
+
+IfacesEthernetView:
+#   groups:
+#     LogicalInterfaces: logical-interface
+   fields:
+     Name: name
+     AdminStatus: admin-status
+     OperStatus: oper-status
+#     SubInterfaces: logical-interface/name
+     SubinterfacesIP: address-family/interface-address/ifa-local
+#   fields_LogicalInterfaces:
+#     LogicalName: name
+#     LogicalAdminStatus: admin-status
+     
