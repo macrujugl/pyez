@@ -8,4 +8,6 @@ dev.open()
 tbl=IfacesEthernetTable(dev)
 tbl.get()
 for k in tbl:
-   print k.items()
+	print k.items()
+	for l in k.items()[2][1]:
+		print l.items()
